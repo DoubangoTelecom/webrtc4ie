@@ -38,8 +38,6 @@
 #define USE_ICE_JINGLE	TRUE
 #define ICE_TIMEOUT		6000
 
-HWND FIXME_HWND = NULL;
-
 typedef enum IceOptions_e
 {
 	IceOptions_All,
@@ -495,7 +493,7 @@ HRESULT CPeerConnection::IceCreateCtx(tmedia_type_t _eMediaType)
 			TSK_DEBUG_ERROR("Failed to create ICE audio context");
 			return E_FAIL;
 		}
-		tnet_ice_ctx_set_stun(mIceCtxAudio, "stun.l.google.com", 19302, "Doubango", "stun-username", "stun-password"); //FIXME: should depends on the
+		tnet_ice_ctx_set_stun(mIceCtxAudio, "stun.l.google.com", 19302, "Doubango", "stun-username", "stun-password"); //FIXME: should depends on user configuration
 	}
 	if(!mIceCtxVideo && (_eMediaType & tmedia_video)){
 		mIceCtxVideo = tnet_ice_ctx_create(USE_ICE_JINGLE, USE_IPV6, USE_ICE_RTCP, TRUE/*video*/, &CPeerConnection::IceCallback, this);
@@ -503,7 +501,7 @@ HRESULT CPeerConnection::IceCreateCtx(tmedia_type_t _eMediaType)
 			TSK_DEBUG_ERROR("Failed to create ICE video context");
 			return E_FAIL;
 		}
-		tnet_ice_ctx_set_stun(mIceCtxVideo, "stun.l.google.com", 19302, "Doubango", "stun-username", "stun-password"); // FIXME
+		tnet_ice_ctx_set_stun(mIceCtxVideo, "stun.l.google.com", 19302, "Doubango", "stun-username", "stun-password"); // FIXME: should depends on user configuration
 	}
 
 	// "none" comparison is used to exclude the "first call"

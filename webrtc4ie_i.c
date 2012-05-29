@@ -6,7 +6,7 @@
 
 
  /* File created by MIDL compiler version 7.00.0500 */
-/* at Mon May 28 23:40:58 2012
+/* at Tue May 29 05:46:42 2012
  */
 /* Compiler settings for .\webrtc4ie.idl:
     Oicf, W1, Zp8, env=Win32 (32b run)
