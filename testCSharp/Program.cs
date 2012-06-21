@@ -1,6 +1,4 @@
-﻿// http://www.codeproject.com/Articles/4411/IEHelper-Internet-Explorer-Helper-Class
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
 using webrtc4ieLib;

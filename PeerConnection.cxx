@@ -31,7 +31,7 @@
 #include <comutil.h>
 #include <stdio.h>
 
-#define THIS_VERSION	"1.0.0"
+#define THIS_VERSION	"1.0.715"
 #define USE_IPV6		FALSE
 #define USE_RTCP_MUX	TRUE
 #define USE_ICE_RTCP	(!USE_RTCP_MUX)

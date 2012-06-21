@@ -32,6 +32,7 @@ static BOOL g_bInitialized = FALSE;
 static BOOL g_bHasDebugConsole = FALSE;
 static char* g_sNullTerminated = NULL;
 static UINT g_iNullTerminated = 0;
+static INT g_nEchoTail = 500;
 static CRITICAL_SECTION g_CS;
 
 void CUtils::Initialize(void)
@@ -76,6 +77,15 @@ void CUtils::Initialize(void)
 
 		tmedia_defaults_set_profile(tmedia_profile_rtcweb);
 		tmedia_defaults_set_pref_video_size(tmedia_pref_video_size_vga);
+
+		tmedia_defaults_set_echo_supp_enabled(tsk_true);
+		tmedia_defaults_set_echo_tail(g_nEchoTail);
+		tmedia_defaults_set_echo_skew(0);
+		tmedia_defaults_set_agc_enabled(tsk_true);
+		tmedia_defaults_set_vad_enabled(tsk_false);
+		tmedia_defaults_set_noise_supp_enabled(tsk_true);
+		tmedia_defaults_set_jb_margin(0);
+		tmedia_defaults_set_jb_max_late_rate(1);
 	}
 }
 
